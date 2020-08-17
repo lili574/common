@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input-img v-model="foo"></input-img>
+    <input-img v-model="bar"></input-img>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import InputImg from './components/InputImg/input-img'
 export default {
   name: 'App',
+  data(){
+    return {
+      foo: 'https://iconfont.alicdn.com/t/1596002262649.jpg@100h_100w.jpg',
+      bar: ''
+    }
+  },
+  watch: {
+  },
   components: {
-    HelloWorld
+    InputImg,
   }
 }
 </script>
